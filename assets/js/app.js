@@ -12,7 +12,7 @@ let phoneError2 = "Enter a valid phone number";
 let emailError1 = "Please enter your email address";
 let emailError2 = "Enter a valid email address";
 let passwordError1 = "Please enter your password";
-let passwordError2 = "password are contains at least 8 characters long,contain at least one uppercase letter, one lowercase letter, one number,and one special character";
+let passwordError2 = "password are contains at least 8 characters,one uppercase letter, one number,and one special character";
 let passwordError3 = "Password are not matches"
 
 let nameRegex = /^[A-Za-z]+$/;
