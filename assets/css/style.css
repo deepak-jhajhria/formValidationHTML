@@ -10,7 +10,8 @@
 .errorMsg {
     font-size: 18px;
     color: #FF0000;
-    text-wrap: nowrap !important;
+    max-width: 400px;
+    margin-left: 12px;
 }
 
 label {
