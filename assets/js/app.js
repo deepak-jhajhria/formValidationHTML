@@ -35,12 +35,14 @@ function validate(field, Regex, Error1, Error2, event) {
         return true;
     }
 }
-function checkPassword() {
+function checkPassword(event) {
     if (confirmPassword.value == "") {
+        event.preventDefault();
         confirmPassword.nextElementSibling.innerHTML = passwordError1;
         return false;
     }
     if (password.value != confirmPassword.value) {
+        event.preventDefault();
         confirmPassword.nextElementSibling.innerHTML = passwordError3;
         return false;
     }
@@ -55,7 +57,8 @@ function validateFrom(e) {
     validate(phoneNumber, phoneNumberRegex, phoneError1, phoneError2, e)
     validate(email, emailRegex, emailError1, emailError2, e)
     validate(password, passwordRegex, passwordError1, passwordError2, e)
-    checkPassword();
+    validate(confirmPassword, passwordRegex, passwordError1, passwordError3, e)
+    checkPassword(e);
     return true;
 }
 
